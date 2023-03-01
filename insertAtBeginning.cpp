@@ -10,7 +10,9 @@ struct Node
 void addNode(Node **head, int data)
 {
     Node *newNode = new Node;
-    newNode->data = 3;
+    newNode->data = data;
+    newNode->next = *head;
+    *head = newNode;
 }
 
 void display(Node *head)
@@ -24,6 +26,10 @@ void display(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
+    addNode(&head, 3);
+    addNode(&head, 2);
+    addNode(&head, 1);
+    display(head);
     return 0;
 }
