@@ -7,6 +7,11 @@ struct Node
     Node *next;
 };
 
+void addNode(Node **head, int data)
+{
+    Node *newNode = new Node;
+    newNode->data = 3;
+}
 
 void display(Node *head)
 {
@@ -19,5 +24,6 @@ void display(Node *head)
 
 int main()
 {
+    Node *head = NULL;
     return 0;
 }
